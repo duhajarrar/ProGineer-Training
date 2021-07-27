@@ -13,12 +13,12 @@ if [ $1 == "-help" ] || [ $1 =="--h" ] || [ $1 == "-h" ]; then
 	echo ".==============================================================================."
 	echo -e "HOW TO USE >> \nExample : ./tdiff.sh -f1 <FIRST ARRAY OF FILES> -f2 <SECOND ARRAY OF FILES> -sort -print_go"
 else if [ $1 == "-file_1" ] || [ $1 == "-f1" ]; then
-	file1String=$2
-	file1Array=($file1String)
+	file1Strings=$2
+	file1Array=($file1Strings)
 	echo -e "\nFirst Array of files length : ${#file1Array[@]}"
 	if [ $3 == "-file_2" ] || [ $3 == "-f2" ]; then
-	file2String=$4
-	file2Array=($file2String)
+	file2Strings=$4
+	file2Array=($file2Strings)
 	echo "Second Array of files length : ${#file2Array[@]}"
 	resultGo=""
 	resultTrue=""
