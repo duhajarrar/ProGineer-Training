@@ -9,7 +9,7 @@ if [ $1 == "-help" ] || [ $1 =="--h" ] || [ $1 == "-h" ]; then
 	echo "| -f2, -file_2       To pass second array of files                             |"
 	echo "| -go, -print_go     To print go/don't go output                               |"
 	echo "| -o, -same_order    To compare files without sorting their contents           |"
-	echo "| -s, -sort    To compare files after sorting their contens                    |"
+	echo "| -s, -sort    To compare files after sorting their contents                   |"
 	echo ".==============================================================================."
 	echo -e "HOW TO USE >> \nExample : ./tdiff.sh -f1 <FIRST ARRAY OF FILES> -f2 <SECOND ARRAY OF FILES> -sort -print_go"
 else if [ $1 == "-file_1" ] || [ $1 == "-f1" ]; then
@@ -37,7 +37,7 @@ else if [ $1 == "-file_1" ] || [ $1 == "-f1" ]; then
 	        echo "The length of second array > first array of files"
 	        ((iteration = $FirstArrayLength))
       	   fi
-        echo -e "Since the number of files passed not equal we will iterate on the minimum number of file passed"
+        echo -e "Since the number of files passed is not equal we will iterate on the minimum number of files passed"
 	fi
 
 	echo -e "\n               >>>> Number of iteration : ${iteration} <<<<\n"
@@ -80,10 +80,10 @@ else if [ $1 == "-file_1" ] || [ $1 == "-f1" ]; then
 
 	echo -e "\nComparison Done"
 		else
-		echo "Second file not found"
+		echo "The second file doesn't found "
 	fi
 
 	else
-		echo "First file not found"
+		echo "The First file doesn't found "
 	fi
 fi
