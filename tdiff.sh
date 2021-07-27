@@ -46,7 +46,6 @@ do
 			file2Array=($file2Strings)
 			continue
 		fi
-
 	else if [ ${args[$j]} == "-o" ] || [ ${args[$j]}  == "-same_order" ]; then
 		option=$((option+1))
 		continue
