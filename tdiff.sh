@@ -23,19 +23,19 @@ else if [ $1 == "-file_1" ] || [ $1 == "-f1" ]; then
 	resultGo=""
 	resultTrue=""
 
-	((a=${#file1Array[@]}))
-	((b=${#file2Array[@]}))
+	((FirstArrayLength=${#file1Array[@]}))
+	((SecondArrayLength=${#file2Array[@]}))
 
-	if [ $a -eq $b ]; then	
+	if [ $FirstArrayLength -eq $SecondArrayLength ]; then	
 		echo "The length of second array = first array of files"
-		((iteration = $a))
+		((iteration = $FirstArrayLength))
 	else 
-           if [ $a -gt $b ]; then
+           if [ $FirstArrayLength -gt $SecondArrayLength ]; then
 	        echo "The length of first array > second array of files"
-	      	((iteration = $b))
+	      	((iteration = $SecondArrayLength))
       	   else
 	        echo "The length of second array > first array of files"
-	        ((iteration = $a))
+	        ((iteration = $FirstArrayLength))
       	   fi
         echo -e "Since the number of files passed not equal we will iterate on the minimum number of file passed"
 	fi
