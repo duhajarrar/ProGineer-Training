@@ -33,7 +33,7 @@ def main():
         
         files1=(args.file1).split()
         files2=(args.file2).split()
-        if (args.file1).count('.txt') != len(files1) or (args.file2).count('.txt') != len(files2):
+        if (args.file1).count('.') != len(files1) or (args.file2).count('.') != len(files2):
             print("Wrong Separator, Please separate using space!")
             return
         minLength=min(len(files1),len(files2))
