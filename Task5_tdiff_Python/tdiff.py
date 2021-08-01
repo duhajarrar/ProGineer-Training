@@ -30,7 +30,6 @@ def main():
         print("So comparison stopped , please try again")
         return
     if args.file1 != None and args.file2 != None:
-        
         files1=(args.file1).split()
         files2=(args.file2).split()
         if (args.file1).count('.') != len(files1) or (args.file2).count('.') != len(files2):
