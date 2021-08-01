@@ -1,2 +1,4 @@
 import example_cy
-example_cy.test(6)
+import timeit
+
+c=timeit.timeit('example_cy.test(6)')
