@@ -30,8 +30,12 @@ def main():
         print("So comparison stopped , please try again")
         return
     if args.file1 != None and args.file2 != None:
+        
         files1=(args.file1).split()
         files2=(args.file2).split()
+        if (args.file1).count('.txt') != len(files1) or (args.file2).count('.txt') != len(files2):
+            print("Wrong Separator, Please separate using space!")
+            return
         minLength=min(len(files1),len(files2))
         result=CompareFiles(files1[:minLength],files2[:minLength],args.go)
         print(".=============================================.")
