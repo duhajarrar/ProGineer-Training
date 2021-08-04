@@ -1,3 +1,3 @@
-from test import add
-a = add(4,21)
+import test
+a = test.add(4,21)
 print(a)
