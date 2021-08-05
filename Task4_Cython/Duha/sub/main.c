@@ -1082,17 +1082,17 @@ static const char __pyx_k_mod1[] = "mod1";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_import[] = "__import__";
-static const char __pyx_k_modules[] = "modules";
 static const char __pyx_k_printVal1[] = "printVal1";
+static const char __pyx_k_sub_modules[] = "sub.modules";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static PyObject *__pyx_n_s_Duha;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mod1;
-static PyObject *__pyx_n_s_modules;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_printVal1;
+static PyObject *__pyx_n_s_sub_modules;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_tuple_;
 /* Late includes */
@@ -1148,9 +1148,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mod1, __pyx_k_mod1, sizeof(__pyx_k_mod1), 0, 0, 1, 1},
-  {&__pyx_n_s_modules, __pyx_k_modules, sizeof(__pyx_k_modules), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_printVal1, __pyx_k_printVal1, sizeof(__pyx_k_printVal1), 0, 0, 1, 1},
+  {&__pyx_n_s_sub_modules, __pyx_k_sub_modules, sizeof(__pyx_k_sub_modules), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
@@ -1163,7 +1163,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
   /* "main.py":3
- * from modules import mod1
+ * from sub.modules import mod1
  * #from modules import mod2
  * mod1.printVal1("Duha")             # <<<<<<<<<<<<<<
  * #mod2.printVal2()
@@ -1452,7 +1452,7 @@ if (!__Pyx_RefNanny) {
   #endif
 
   /* "main.py":1
- * from modules import mod1             # <<<<<<<<<<<<<<
+ * from sub.modules import mod1             # <<<<<<<<<<<<<<
  * #from modules import mod2
  * mod1.printVal1("Duha")
  */
@@ -1461,7 +1461,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_mod1);
   __Pyx_GIVEREF(__pyx_n_s_mod1);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_mod1);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_modules, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sub_modules, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_mod1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -1471,7 +1471,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "main.py":3
- * from modules import mod1
+ * from sub.modules import mod1
  * #from modules import mod2
  * mod1.printVal1("Duha")             # <<<<<<<<<<<<<<
  * #mod2.printVal2()
@@ -1488,7 +1488,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "main.py":1
- * from modules import mod1             # <<<<<<<<<<<<<<
+ * from sub.modules import mod1             # <<<<<<<<<<<<<<
  * #from modules import mod2
  * mod1.printVal1("Duha")
  */

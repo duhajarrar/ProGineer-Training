@@ -1,13 +1,6 @@
-#from distutils.core import setup
+#from setuptools import setup
 #from Cython.Build import cythonize
-#from Cython.Distutils import build_ext
-
-#setup(
- #   name='Duha',
-  #  packages=["Duha","sub","modules"],
-   # ext_modules=cythonize("**/*.py"),
-    #cmdclass={'build_ext':build_ext},
-#)
+#setup(ext_modules=cythonize('s.py'))
 
 import os
 import sysconfig
@@ -40,8 +33,7 @@ class BuildExtWithoutPlatformSuffix(build_ext):
 
 
 setup(
+    name="s",
     cmdclass={'build_ext': BuildExtWithoutPlatformSuffix},
-    name='Duha',
-    packages=["Duha","sub","modules"],
-    ext_modules=cythonize("**/*.py"),
+    ext_modules=cythonize("s.py")
 )
