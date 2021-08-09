@@ -2,6 +2,7 @@
 import sys
 import os
 import argparse
+import time
 def CompareFiles(files1,files2,tmp_dir,diff_tool):
     result=[]
     print("Diff GUI Tool >> ")
@@ -14,10 +15,13 @@ def CompareFiles(files1,files2,tmp_dir,diff_tool):
     	print("Files #",i+1,"/",len(files1)," comparison >>")
     	out=os.popen(diff_tool+' '+files1[i]+' '+files2[i])
     	output=out.read()
+    	if(diff_tool == "diff"):
+    		print(output)
     	os.popen('cd ..')
     	f1 =open(files1[i]).read()
     	f2 =open(files2[i]).read()
     	result.append(f1==f2)
+    	time.sleep(1)
     	os.popen('rm -v '+tmp_dir+'/*')
     return result
 
