@@ -17,11 +17,12 @@ def CompareFiles(files1,files2,tmp_dir,diff_tool):
     	output=out.read()
     	if(diff_tool == "diff"):
     		print(output)
+    		time.sleep(2)
     	os.popen('cd ..')
     	f1 =open(files1[i]).read()
     	f2 =open(files2[i]).read()
     	result.append(f1==f2)
-    	time.sleep(1)
+    	
     	os.popen('rm -v '+tmp_dir+'/*')
     return result
 
@@ -33,7 +34,7 @@ def main():
     parser.add_argument('-diff_tool','--diff_tool',help="diff tool to use in comparison",default="tkdiff")
     parser.add_argument('-tmp_dir','--tmp_dir',help="name of temp dir to store files in when processing",default='tmp')
     args=parser.parse_args()
-    print(args)
+    #print(args)
     if args.file1 == None :
         print("File #1 not found")
         print("So comparison stopped , please try again")
@@ -50,10 +51,10 @@ def main():
             return
         minLength=min(len(files1),len(files2))
         result=CompareFiles(files1[:minLength],files2[:minLength],args.tmp_dir,args.diff_tool)
-        print(".=============================================.")
-        print("|              Comparison Result              |")
-        print("|---------------------------------------------|")
-        for i in range(minLength):
-            print("      ",files1[i]," & ",files2[i]," : ",result[i],"       ")
-        print("|_____________________________________________|")
+        #print(".=============================================.")
+        #print("|              Comparison Result              |")
+        #print("|---------------------------------------------|")
+        #for i in range(minLength):
+         #   print("      ",files1[i]," & ",files2[i]," : ",result[i],"       ")
+        #print("|_____________________________________________|")
 main()
