@@ -23,7 +23,8 @@ def CompareFiles(files1,files2,tmp_dir,diff_tool):
     	f2 =open(files2[i]).read()
     	result.append(f1==f2)
     	
-    	os.popen('rm -v '+tmp_dir+'/*')
+    	os.popen('rm -rf '+tmp_dir+'/'+files1[i])
+    	os.popen('rm -rf '+tmp_dir+'/'+files2[i])    	
     return result
 
 def main():
