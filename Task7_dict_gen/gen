@@ -1,0 +1,13 @@
+#! /usr/bin/env python3
+
+def gen():
+	for j in range(len(dictName)):
+	    yield dictName['Duha'+str(j)]
+	
+dictName={}
+for i in range(10):
+	dictName['Duha'+str(i)]={22+i,173+i}
+print(dictName)
+for k in gen():
+	print("",k)
+	
