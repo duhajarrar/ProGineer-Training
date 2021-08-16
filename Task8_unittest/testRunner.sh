@@ -8,4 +8,4 @@ pytest -s -v diffPytest.py
 echo "<< Top 3 unittest lib >>"
 echo "***** #1 PyTest *****" 
 echo "      #2 NoseTest    "
-echo "      #3 UnitTest    "
+echo "      #3 UnitTest    "
